@@ -1,0 +1,27 @@
+{
+  "title": "Alyio.NLog.Extensions.Logging",
+  "version": "1.0.0-beta06",
+  "authors": [ "Roy" ],
+  "packOptions": {
+    "licenseUrl": "https://raw.githubusercontent.com/qqbuby/Alyio.NLog.Extensions.Logging/dev/LICENSE",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/qqbuby/Alyio.NLog.Extensions.Logging"
+    },
+    "owners": [ "Roy" ],
+    "tags": [ "logging", "NLog" ]
+  },
+  "dependencies": {
+    "NLog": "5.0.0-beta06",
+    "Microsoft.AspNetCore.Hosting": "1.0.0",
+    "Microsoft.Extensions.Logging": "1.0.0"
+  },
+  "frameworks": {
+    "net451": {
+      "frameworkAssemblies": {
+        "System.Xml": "4.0.0.0"
+      }
+    },
+    "netstandard1.3": {}
+  }
+}
