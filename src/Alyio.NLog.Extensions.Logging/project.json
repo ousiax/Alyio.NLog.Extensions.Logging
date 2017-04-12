@@ -11,6 +11,10 @@
     "owners": [ "Roy" ],
     "tags": [ "logging", "NLog" ]
   },
+  "buildOptions": {
+    "xmlDoc": true,
+    "warningsAsErrors": true
+  },
   "dependencies": {
     "NLog": "5.0.0-beta06",
     "Microsoft.AspNetCore.Hosting": "1.0.0",

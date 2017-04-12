@@ -1,23 +1,19 @@
-﻿using System.IO;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Logging;
-using NLog;
-using NLog.Config;
+﻿using Microsoft.Extensions.Logging;
 
 namespace Alyio.NLog.Extensions.Logging
 {
+    /// <summary>
+    /// Extension methods for the <see cref="ILoggerFactory"/> class.
+    /// </summary>
     public static class LoggerFactoryExtensions
     {
+        /// <summary>
+        /// Adds a NLog logger.
+        /// </summary>
         public static ILoggerFactory AddNLog(this ILoggerFactory factory)
         {
             factory.AddProvider(new NLoggerProvider());
             return factory;
-        }
-
-        public static void ConfigureNLog(this IHostingEnvironment hostingEnv, string configFileRelativePath, bool ignoreErrors = false)
-        {
-            var fileName = Path.Combine(hostingEnv.ContentRootPath, configFileRelativePath);
-            LogManager.Configuration = new XmlLoggingConfiguration(fileName, ignoreErrors);
         }
     }
 }
