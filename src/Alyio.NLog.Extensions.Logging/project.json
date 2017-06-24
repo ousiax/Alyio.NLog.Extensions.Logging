@@ -16,7 +16,7 @@
     "warningsAsErrors": true
   },
   "dependencies": {
-    "NLog": "5.0.0-beta07",
+    "NLog": "5.0.0-beta09",
     "Microsoft.AspNetCore.Hosting": "1.0.0",
     "Microsoft.Extensions.Logging": "1.0.0"
   },
