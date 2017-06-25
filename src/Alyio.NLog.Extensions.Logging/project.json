@@ -1,6 +1,6 @@
 {
   "title": "Alyio.NLog.Extensions.Logging",
-  "version": "1.0.0-beta07",
+  "version": "1.0.0-beta09",
   "authors": [ "Roy" ],
   "packOptions": {
     "licenseUrl": "https://raw.githubusercontent.com/qqbuby/Alyio.NLog.Extensions.Logging/dev/LICENSE",
