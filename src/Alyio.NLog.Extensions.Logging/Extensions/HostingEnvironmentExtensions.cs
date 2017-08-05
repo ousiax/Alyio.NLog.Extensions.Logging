@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using NLog;
 using NLog.Config;
 
-namespace Alyio.NLog.Extensions.Logging.Extensions
+namespace Alyio.NLog.Extensions.Logging
 {
     /// <summary>
     /// Extension methods for setting up NLog.

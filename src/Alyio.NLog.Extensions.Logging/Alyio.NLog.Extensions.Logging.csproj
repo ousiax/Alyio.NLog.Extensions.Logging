@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyTitle>Alyio.NLog.Extensions.Logging</AssemblyTitle>
-    <VersionPrefix>1.0.0-beta09-02</VersionPrefix>
+    <VersionPrefix>1.0.0-beta09-03</VersionPrefix>
     <Authors>Roy</Authors>
     <TargetFrameworks>net451;netstandard1.3;netstandard1.5</TargetFrameworks>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
