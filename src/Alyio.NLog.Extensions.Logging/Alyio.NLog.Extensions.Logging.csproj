@@ -1,14 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyTitle>Alyio.NLog.Extensions.Logging</AssemblyTitle>
-    <VersionPrefix>1.0.0-beta09-03</VersionPrefix>
+    <VersionPrefix>2.0.0-beta09</VersionPrefix>
     <Authors>Roy</Authors>
-    <TargetFrameworks>net451;netstandard1.3;netstandard1.5</TargetFrameworks>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>Alyio.NLog.Extensions.Logging</AssemblyName>
+    <Description>NLog provider for Microsoft's in .NET Core</Description>
     <PackageId>Alyio.NLog.Extensions.Logging</PackageId>
     <PackageTags>logging;NLog</PackageTags>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>Migrate to .NET Core 2.0</PackageReleaseNotes>
     <PackageLicenseUrl>https://raw.githubusercontent.com/qqbuby/Alyio.NLog.Extensions.Logging/dev/LICENSE</PackageLicenseUrl>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/qqbuby/Alyio.NLog.Extensions.Logging</RepositoryUrl>
@@ -18,7 +21,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="NLog" Version="5.0.0-beta09" />
-    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="1.1.2" />
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.0.0" />
   </ItemGroup>
 </Project>
