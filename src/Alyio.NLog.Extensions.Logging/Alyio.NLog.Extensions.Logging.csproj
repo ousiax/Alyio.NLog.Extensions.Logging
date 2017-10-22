@@ -2,7 +2,7 @@
   <PropertyGroup>
     <AssemblyTitle>Alyio.NLog.Extensions.Logging</AssemblyTitle>
     <VersionPrefix>2.0.0</VersionPrefix>
-    <VersionSuffix>beta11</VersionSuffix>
+    <VersionSuffix>beta12</VersionSuffix>
     <Authors>Roy</Authors>
     <TargetFramework>netstandard2.0</TargetFramework>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
