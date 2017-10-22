@@ -1,5 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <Title>Alyio.NLog.Extensions.Logging</Title>
     <AssemblyTitle>Alyio.NLog.Extensions.Logging</AssemblyTitle>
     <VersionPrefix>2.1.0</VersionPrefix>
     <VersionSuffix>beta12</VersionSuffix>
@@ -8,7 +9,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>Alyio.NLog.Extensions.Logging</AssemblyName>
-    <Description>NLog provider for Microsoft's in .NET Core</Description>
+    <Description>NLog provider for Microsoft's in ASP.NET Core</Description>
     <PackageId>Alyio.NLog.Extensions.Logging</PackageId>
     <PackageTags>logging;NLog</PackageTags>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
