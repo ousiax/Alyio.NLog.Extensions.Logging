@@ -12,7 +12,7 @@
     <PackageId>Alyio.NLog.Extensions.Logging</PackageId>
     <PackageTags>logging;NLog</PackageTags>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Update NLog to 5.0.0-beta11</PackageReleaseNotes>
+    <PackageReleaseNotes>Use NLog provider with calling the provider's AddNLog extension method in `Program.cs`:</PackageReleaseNotes>
     <PackageLicenseUrl>https://raw.githubusercontent.com/qqbuby/Alyio.NLog.Extensions.Logging/dev/LICENSE</PackageLicenseUrl>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/qqbuby/Alyio.NLog.Extensions.Logging</RepositoryUrl>
@@ -24,5 +24,7 @@
     <PackageReference Include="NLog" Version="5.0.0-beta11" />
     <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.0.0" />
   </ItemGroup>
 </Project>

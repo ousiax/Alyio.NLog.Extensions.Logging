@@ -6,10 +6,15 @@ namespace Alyio.NLog.Extensions.Logging
 {
     sealed class NLoggerProvider : Microsoft.Extensions.Logging.ILoggerProvider
     {
-        public NLoggerProvider()
+        public NLoggerProvider(string configFile, bool ignoreErrors)
         {
+            if (configFile == null)
+            {
+                throw new System.ArgumentNullException(nameof(configFile));
+            }
+
             ConfigurationItemFactory.Default.RegisterItemsFromAssembly(this.GetType().GetTypeInfo().Assembly);
-            LogManager.Configuration = new XmlLoggingConfiguration("nlog.config", false);
+            LogManager.Configuration = new XmlLoggingConfiguration(configFile, ignoreErrors);
         }
 
         public Microsoft.Extensions.Logging.ILogger CreateLogger(string categoryName)

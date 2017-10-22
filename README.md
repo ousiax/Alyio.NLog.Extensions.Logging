@@ -4,6 +4,40 @@
 
 The layout render `trace_identifier` gets the trace identifier of the current HTTP context (i.e. `HttpContext.TraceIdentifier`), and the layout render `user_identity_name` gets the name of the current HTTP context user identity (i.e. `HttpContext.User.Identity.Name`).
 
+## ASP.NET Core 2.x
+
+To use NLog provider, call the provider's AddNLog extension method in `Program.cs`:
+
+```cs
+using Alyio.NLog.Extensions.Logging;
+using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Hosting;
+
+namespace WebApplication1
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            BuildWebHost(args).Run();
+        }
+
+        public static IWebHost BuildWebHost(string[] args) =>
+            WebHost.CreateDefaultBuilder(args)
+                .ConfigureLogging(configureLogging =>
+                {
+                    configureLogging.AddNLog();
+                })
+                .UseStartup<Startup>()
+                .Build();
+    }
+}
+```
+
+
+
+## ASP.NET Core 1.x
+
 To use these HTTP context layout renderers, you must add `IHttpContextAccessor` to the current service collections. For example, you can add the `IHttpContextAccessor` as below:
 
 ```cs
