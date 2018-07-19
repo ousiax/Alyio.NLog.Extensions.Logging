@@ -37,7 +37,7 @@ namespace Alyio.NLog.Extensions.Logging.Tests
                         var id = new ClaimsIdentity("HMAC", ClaimTypes.Name, ClaimTypes.Role);
                         id.AddClaim(new Claim(ClaimTypes.Name, "zhangsan@lisi.com"));
                         ctx.User = new ClaimsPrincipal(id);
-
+                        ctx.Request.Headers.Add("X-Request-Id", "foobar");
                         ctx.RequestServices.GetService<ILoggerFactory>().CreateLogger("HELLO").LogInformation("WORLD");
 
                         return Task.CompletedTask;
