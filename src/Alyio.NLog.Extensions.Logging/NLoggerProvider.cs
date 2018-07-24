@@ -4,6 +4,7 @@ using NLog.Config;
 
 namespace Alyio.NLog.Extensions.Logging
 {
+    [Microsoft.Extensions.Logging.ProviderAlias("ZNLog")]
     sealed class NLoggerProvider : Microsoft.Extensions.Logging.ILoggerProvider
     {
         public NLoggerProvider(string configFile, bool ignoreErrors)
