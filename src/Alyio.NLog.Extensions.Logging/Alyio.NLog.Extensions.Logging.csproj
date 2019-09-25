@@ -11,10 +11,9 @@
     <AssemblyName>Alyio.NLog.Extensions.Logging</AssemblyName>
     <Description>NLog provider for Microsoft's in ASP.NET Core</Description>
     <PackageId>Alyio.NLog.Extensions.Logging</PackageId>
+    <IncludeSymbols>true</IncludeSymbols>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>logging;NLog</PackageTags>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Update NLog to 4.5.2</PackageReleaseNotes>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/qqbuby/Alyio.NLog.Extensions.Logging/dev/LICENSE</PackageLicenseUrl>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/qqbuby/Alyio.NLog.Extensions.Logging</RepositoryUrl>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
