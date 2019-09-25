@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Xunit;
 
@@ -23,7 +24,6 @@ namespace Alyio.NLog.Extensions.Logging.Tests
             var builder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddEnvironmentVariables();
-            var Configuration = builder.Build();
 
             var host = new WebHostBuilder()
                 .ConfigureServices(new Action<IServiceCollection>(services =>
