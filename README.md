@@ -4,32 +4,61 @@
 
 The layout render `trace_identifier` gets the trace identifier of the current HTTP context (i.e. `HttpContext.TraceIdentifier`), and the layout render `user_identity_name` gets the name of the current HTTP context user identity (i.e. `HttpContext.User.Identity.Name`).
 
-## ASP.NET Core 2.x
 
-To use NLog provider, call the provider's AddNLog extension method in `Program.cs`:
+## To use NLog provider, call the provider's AddNLog extension method in `Program.cs`:
 
-```cs
-using Alyio.NLog.Extensions.Logging;
-using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
+- ASP.NET Core 2.x
 
-namespace WebApplication1
-{
-    public class Program
+
+    ```cs
+    using Alyio.NLog.Extensions.Logging;
+    using Microsoft.AspNetCore;
+    using Microsoft.AspNetCore.Hosting;
+    
+    namespace WebApplication1
     {
-        public static void Main(string[] args)
+        public class Program
         {
-            BuildWebHost(args).Run();
+            public static void Main(string[] args)
+            {
+                BuildWebHost(args).Run();
+            }
+    
+            public static IWebHost BuildWebHost(string[] args) =>
+                WebHost.CreateDefaultBuilder(args)
+                    .ConfigureLogging(configureLogging =>
+                    {
+                        configureLogging.AddNLog();
+                    })
+                    .UseStartup<Startup>()
+                    .Build();
         }
-
-        public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .ConfigureLogging(configureLogging =>
-                {
-                    configureLogging.AddNLog();
-                })
-                .UseStartup<Startup>()
-                .Build();
     }
-}
-```
+    ```
+
+- ASP.NET Core 3.x
+
+    ```cs
+    using Alyio.NLog.Extensions.Logging;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.Extensions.Hosting;
+    
+    namespace WebApplication1
+    {
+        public class Program
+        {
+            public static void Main(string[] args)
+            {
+                CreateHostBuilder(args).Build().Run();
+            }
+    
+            public static IHostBuilder CreateHostBuilder(string[] args) =>
+                Host.CreateDefaultBuilder(args)
+                    .ConfigureLogging(builder => builder.AddNLog())
+                    .ConfigureWebHostDefaults(webBuilder =>
+                    {
+                        webBuilder.UseStartup<Startup>();
+                    });
+        }
+    }
+    ```
