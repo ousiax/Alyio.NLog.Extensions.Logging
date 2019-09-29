@@ -24,7 +24,7 @@ namespace Alyio.NLog.Extensions.Logging
         /// Add a NLog provider.
         /// </summary>
         /// <param name="builder"><see cref="ILoggingBuilder"/>.</param>
-        /// <param name="configFile">The configuration file reletive to the <see cref="System.IO.Directory.GetCurrentDirectory"/>.</param>
+        /// <param name="configFile">The path of configuration file</param>
         /// <param name="ignoreErrors">A <see cref="bool"/> value to indicate whether to ignore errors when apply the configuration.</param>
         /// <returns><see cref="ILoggingBuilder"/></returns>
         public static ILoggingBuilder AddNLog(this ILoggingBuilder builder, string configFile, bool ignoreErrors = false)
